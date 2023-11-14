@@ -1,0 +1,509 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: #eee;
+  font-family: "MS Sans Serif", Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 3vmin;
+  background-image: url("../src/img/wallpaper/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.background {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  /*filter: blur(8em) opacity(0.6);*/
+  position: absolute;
+}
+
+/* CSS MUSIC PLAYER*/
+
+.player {
+  width: 700px !important;
+  height: 300px !important;
+}
+
+.container-info-music {
+  padding-left: 30px;
+  align-items: start;
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.box-spotify {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 40px;
+  align-items: center;
+}
+
+.music-group {
+  width: 400px;
+  height: auto;
+}
+
+.music-group p {
+  display: flex;
+  flex-direction: row;
+}
+
+.music-group select {
+  width: 100%;
+  margin-left: 10px;
+  border: 2px inset #fff !important;
+  box-shadow: -1px -1px #000 !important;
+  background-color: white;
+}
+
+.option-music {
+  font-weight: bold;
+}
+
+#tracks {
+  margin-left: 20px;
+}
+
+#artist {
+  margin-left: 20px;
+}
+
+.music-group p {
+  font-size: 17px !important;
+}
+
+.music {
+  font-size: 20px !important;
+  height: 35px !important;
+}
+
+.icon-music {
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.photo-album {
+  height: 200px;
+  width: 200px;
+}
+
+.bnt-spotify {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.active {
+  border: 1px inset #fff !important;
+  background: silver;
+  box-shadow: -1px -1px #000 !important;
+  outline: 0 !important;
+  background-image: url(../src/img/background.png) !important;
+}
+
+.icon-control-player {
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+img {
+  background: transparent;
+}
+
+/*CSS NOTE*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.box {
+  width: 400px;
+  height: 150px;
+  background: #C0C0C0;
+  border-width: 1px;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+}
+
+.note {
+  top: 20%;
+  left: 30% !important;
+}
+
+div.title {
+  height: 25px;
+  width: 100%;
+  background: #000080;
+  color: #FFF;
+}
+
+img.title {
+  float: left;
+}
+
+p.title {
+  margin: 2px 0 0 1px;
+  float: left;
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.title button {
+  /*position:absolute;
+  right:3px;
+  top:3px;*/
+  margin: 2px 2px 2px 1px;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: #C0C0C0;
+  border-width: 1px;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Tahoma;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.body {
+  padding: 13px 12px 12px;
+  height: 100%;
+  width: calc(100% - 26px);
+  display: inline-block;
+}
+
+div.body p {
+  font-family: "MS Sans Serif";
+  font-size: 15px;
+  color: #000000;
+}
+
+div.body button {
+  font-family: "MS Sans Serif";
+  font-size: 15px;
+  outline: 1px solid #000000;
+  background: #C0C0C0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  padding: 4px 10px;
+  margin: 0px auto 3px;
+  display: block;
+  position: relative;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.body #bnt-login {
+  margin-top: 30px;
+}
+
+div.body button:hover {
+  border: 1px inset #fff !important;
+  background: silver;
+  box-shadow: -1px -1px #000 !important;
+  outline: 0 !important;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #424242;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/*CSS NOTEPAD */
+.body-notepad {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  border: 2px inset #fff !important;
+  box-shadow: -1px -1px #000 !important;
+  padding-left: 10px;
+}
+
+.notepad {
+  width: 400px;
+  height: 500px;
+  top: 50%;
+  left: 60% !important;
+}
+
+.notepad .body {
+  padding: 10px 1px 0 10px;
+  height: 100%;
+  width: calc(100% - 10px);
+  display: inline-block;
+
+}
+
+.spotify-img {
+  height: 240px;
+  width: 240px;
+  margin-top: 10px;
+}
+
+.body-notepad p {
+  text-indent: 1.5em;
+}
+
+.notepad-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* CSS INPUT TYPE RANGE*/
+
+input[type=range] {
+  height: 32px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0px #000000;
+  background: #000000;
+  border-radius: 0px;
+  border: 1px solid #8A8A8A;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 0px #000000;
+  border: 1px solid #8A8A8A;
+  height: 24px;
+  width: 17px;
+  border-radius: 0px;
+  background: #C0C0C0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -12.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #000000;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0px #000000;
+  background: #000000;
+  border-radius: 0px;
+  border: 1px solid #8A8A8A;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 0px #000000;
+  border: 1px solid #8A8A8A;
+  height: 24px;
+  width: 17px;
+  border-radius: 0px;
+  background: #DADADA;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 1px solid #8A8A8A;
+  border-radius: 0px;
+  box-shadow: 1px 1px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #000000;
+  border: 1px solid #8A8A8A;
+  border-radius: 0px;
+  box-shadow: 1px 1px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 0px #000000;
+  border: 1px solid #8A8A8A;
+  height: 24px;
+  width: 17px;
+  border-radius: 0px;
+  background: #DADADA;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #000000;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #000000;
+}
+
+/* CSS TASKBAR */ 
+#taskbar {
+  height: 30px;
+  background-color: rgb(192,192,192);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-top: ridge 2px white;
+}
+
+.start {
+  background: silver;
+  text-align: right;
+  font-weight: bolder;
+  font-size: 15px;
+  float: left;
+  width: 70px;
+  height: 25px;
+  display: inline-block;
+  padding: 1px 2px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-top: ridge 2px white;
+  border-left: ridge 2px white;
+  border-bottom: ridge 2px black;
+  border-right: ridge 2px black;
+}
+
+button:hover  {
+  border: 1px inset #fff !important;
+  background: green !important;
+  box-shadow: -1px -1px #000 !important;
+  outline: 0 !important;
+  background-image: url(../src/img/background.png) !important;
+}
+
+.button-contact{
+  background: silver;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 15px;
+  float: left;
+  width: 130px;
+  height: 25px;
+  padding-left: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-top: ridge 2px white;
+  border-left: ridge 2px white;
+  border-bottom: ridge 2px black;
+  border-right: ridge 2px black;
+}
+
+button:hover, .button-contact:hover {
+  border: 1px inset #fff !important;
+  box-shadow: -1px -1px #000 !important;
+  outline: 0 !important;
+  background-image: url(../src/img/background.png) !important;
+}
+
+#notifications {
+  margin-right: 2px;
+  border-top: inset 2px grey;
+  border-left: inset 2px grey;
+  border-bottom: inset 2px white;
+  border-right: inset 2px white;
+  padding-top: 17px;
+  display: inline-block;
+  float: right;
+  font-weight: 500;
+  width: 130px;
+  height: 25px;
+}
+
+#clock {
+  text-align: center;
+  color: black;
+  margin-top: -13px;
+  font-size: 15px;
+}

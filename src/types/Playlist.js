@@ -1,0 +1,4 @@
+ const Playlist = {
+    id: "",
+    name: ""
+}
