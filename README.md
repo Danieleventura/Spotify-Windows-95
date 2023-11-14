@@ -66,4 +66,4 @@ Here you have some ideas to add to the prototype:
 - Include a Transfer Playback button to transfer the current playback to another Spotify instance using the Get Playback State endpoint.
 
 - Include lyrics
-# Spotify-Windows-95
+
