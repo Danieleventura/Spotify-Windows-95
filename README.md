@@ -4,7 +4,7 @@ This repository contains the source code for the [Web Playback SDK Guide](https:
 
 The application can be viewed at https://spotify-rust-chi.vercel.app/.
 
-My Backend server repository: 
+My Backend server repository: https://github.com/Danieleventura/Spotify-wind95-server/.
 
 
 The backend server can be included in the same react app using proxy, as shown in the guide in the [Proxying Backend Requests](https://developer.spotify.com/documentation/web-playback-sdk/guide/) topic.
