@@ -1,8 +1,14 @@
 import React from 'react';
 import icon from '../img/icons/tip.png';
 
+const dotenv = require('dotenv');
+
+dotenv.config()
+
 
 function Login() {
+
+    const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL + "/auth/login"
     return (
         <>
             <div class="box">
@@ -15,7 +21,7 @@ function Login() {
                 <div class="body">
                     <p>You'll need a premium account to use it.</p>
                     <p>Login with Spotify</p>
-                    <button id="bnt-login"><a href="https://spotify-server-tau.vercel.app/auth/login">Login</a></button>
+                    <button id="bnt-login"><a href={REACT_APP_SERVER_URL}>Login</a></button>
                 </div>
             </div>
         </>
