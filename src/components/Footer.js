@@ -14,7 +14,7 @@ function Footer() {
                     <button class="start">
                         <img src={icon} class="icon-control-player"></img>Start
                     </button>
-                    <a href="https://github.com/Danieleventura/spotify-web-playback" target="_blank"  class="button-contact">
+                    <a href="https://github.com/Danieleventura/Spotify-Windows-95" target="_blank"  class="button-contact">
                         <img src={iconGithub} class="icon-control-player"></img>GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/daniele-ventura-83b66410b/" target="_blank" class="button-contact">

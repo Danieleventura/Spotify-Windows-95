@@ -2,7 +2,7 @@
 
 This repository contains the source code for the [Web Playback SDK Guide](https://developer.spotify.com/documentation/web-playback-sdk/guide/).
 
-The application can be viewed at https://spotify-rust-chi.vercel.app/.
+The application can be viewed at https://spotify-windows-95.vercel.app/.
 
 My Backend server repository: https://github.com/Danieleventura/Spotify-wind95-server/.
 
@@ -29,7 +29,6 @@ SPOTIFY_CLIENT_SECRET='my_client_secret'
 For this application you need the url of your backend server:
 
 ```bash
-SPOTIFY_CLIENT_ID='my_client_id'
 REACT_APP_SERVER_URL='server url'
 ```
 
