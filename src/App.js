@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import WebPlayback from './WebPlayback'
 import Login from './components/Login'
+import Desktop from './components/Desktop'
 import './App.css';
 import Footer from './components/Footer';
 
@@ -46,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <>  <Desktop></Desktop>
         { (token === '') ? <Login/> : <WebPlayback token={token} /> }
         <Footer></Footer>
     </>

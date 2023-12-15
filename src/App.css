@@ -507,3 +507,39 @@ button:hover, .button-contact:hover {
   margin-top: -13px;
   font-size: 15px;
 }
+
+/* ICONS DESKTOP   */
+
+.box-desktop{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 1%;
+  position: absolute;
+}
+
+.icons-desktop{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.icons-desktop p{
+  margin-top: 10px;
+}
+
+.icons-desktop:hover{
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  background-image: none !important;
+  background: none !important;
+  opacity: 0.8;
+}

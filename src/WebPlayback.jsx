@@ -61,7 +61,8 @@ function WebPlayback(props) {
 
     const getUserSavedTracks = async () => {
         setTracks([]);
-        
+        console.log(user)
+
         if (user.uri != User) {
             var uri = user.uri + ":collection";
             setCurrentPlaylistURI(uri);
