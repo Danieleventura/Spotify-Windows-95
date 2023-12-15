@@ -28,6 +28,15 @@ function WebPlayback(props) {
     const [current_track_uri, setCurrentTrackURI] = useState("");
     const [is_shuffle, setShuffle] = useState(false);
 
+    const getTracks = async (playlist_id) => {
+        setTracks([]);
+        if (playlist_id == 1) {
+            getUserSavedTracks()
+        } else {
+            getTracksPlaylist(playlist_id);
+        }
+    };
+
     const getTracksPlaylist = async (playlist_id) => {
         setTracks([]);
         playlists.map(function (item) {
@@ -40,11 +49,36 @@ function WebPlayback(props) {
         let offset = 0;
         while (next != null) {
             let response = await api.getItemsPlaylist(props.token, offset, playlist_id);
-            setTracks(tracks => [...tracks, ...response.items]);
+
+            response.items.forEach((track) => {
+                setTracks(tracks => [...tracks, track]);
+            })
             next = response.next;
             offset += 100;
         }
 
+    };
+
+    const getUserSavedTracks = async () => {
+        setTracks([]);
+        
+        if (user.uri != User) {
+            var uri = user.uri + ":collection";
+            setCurrentPlaylistURI(uri);
+            setPLaylist("Liked Songs");
+        }
+
+        let next = "nextTrack";
+        let offset = 0;
+        while (next != null) {
+            let response = await api.getUserSavedTracks(props.token, offset);
+
+            response.items.forEach((track) => {
+                setTracks(tracks => [...tracks, track]);
+            })
+            next = response.next;
+            offset += 100;
+        }
     };
 
     const changeShuffle = async () => {
@@ -78,14 +112,15 @@ function WebPlayback(props) {
             } else {
                 document.getElementById('btn-shuffle').classList.remove("active");
             }
-            let metada = state.context.metadata;
-            let playlist_id = metada.uri.split(":");
-            if (metada.name != "") {
-                setCurrentPlaylistURI(metada.uri);
-                setPLaylist(metada.context_description);
-                //getTracksPlaylist(playlist_id[2])
+            let metadata = state.context.metadata;
+            let playlist_id = state.context.uri?.split(":") || [];
+            if (metadata.context_description) {
+                setCurrentPlaylistURI(metadata.uri);
+                setPLaylist(metadata.context_description);
+                //getTracksPlaylist(playlist_id[2]);
             } else {
                 setPLaylist("Liked Songs");
+                //getUserSavedTracks();
             }
         };
 
@@ -170,8 +205,9 @@ function WebPlayback(props) {
                             <div class="box-spotify">
                                 <div class="music-group">
                                     <p>Playlist:
-                                        <select name="playlists" id="playlist" onChange={(e) => { getTracksPlaylist(e.target.value) }}>
+                                        <select name="playlists" id="playlist" onChange={(e) => { getTracks(e.target.value) }}>
                                             <option value="0" class="option-music" selected disabled>{current_playlist}</option>
+                                            <option value="1" >Liked Songs</option>
                                             {playlists.map(item =>
                                                 <option key={item.uri} value={item.id}>{item.name}</option>
                                             )};

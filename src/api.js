@@ -51,6 +51,22 @@ export const api = {
         return response.data;
     },
 
+    getUserSavedTracks: async (token, offset) => {
+        const config = {
+            params: {
+                "limit": 50,
+                "offset": offset
+            },
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        };
+
+        let response = await http.get(`/me/tracks`, config);
+        return response.data;
+    },
+
+
     setTrack: async (token, track_uri, playlist_uri) => {
         const config = {
             headers: {
