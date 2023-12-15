@@ -63,7 +63,7 @@ function WebPlayback(props) {
         setTracks([]);
         console.log(user)
 
-        if (user.uri != User) {
+        if (user.uri != null) {
             var uri = user.uri + ":collection";
             setCurrentPlaylistURI(uri);
             setPLaylist("Liked Songs");
@@ -95,6 +95,7 @@ function WebPlayback(props) {
     };
 
     const playTrack = async (e) => {
+        console.log("uir: ", current_playlist_uri)
         setCurrentTrackURI(e.target.value);
         let response = await api.setTrack(props.token, e.target.value, current_playlist_uri);
     };
@@ -116,7 +117,7 @@ function WebPlayback(props) {
             let metadata = state.context.metadata;
             let playlist_id = state.context.uri?.split(":") || [];
             if (metadata.context_description) {
-                setCurrentPlaylistURI(metadata.uri);
+                //setCurrentPlaylistURI(metadata.uri);
                 setPLaylist(metadata.context_description);
                 //getTracksPlaylist(playlist_id[2]);
             } else {
