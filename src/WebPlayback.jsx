@@ -207,7 +207,7 @@ function WebPlayback(props) {
                             <div class="box-spotify">
                                 <div class="music-group">
                                     <p>Playlist:
-                                        <select name="playlists" id="playlist" onChange={(e) => { getTracks(e.target.value) }}>
+                                        <select name="playlists" id="playlist" onChange={(e) => { getTracks(e.target.value), document.getElementById("playlist").value = "0"; }}>
                                             <option value="0" class="option-music" selected disabled>{current_playlist}</option>
                                             <option value="1" >Liked Songs</option>
                                             {playlists.map(item =>
