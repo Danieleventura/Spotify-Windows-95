@@ -86,21 +86,22 @@ body {
   flex-direction: row;
 }
 
-.music-group select {
+.music-group select, .input-player {
   width: 100%;
   margin-left: 10px;
-  border: 2px inset #fff !important;
-  box-shadow: -1px -1px #000 !important;
+  border: 1px solid black;
   background-color: white;
+  border-color: black #808080 #fff !important;
 }
 
 .option-music {
   font-weight: bold;
 }
 
-#tracks {
+.tracks , #tracks{
   margin-left: 20px;
 }
+
 
 #artist {
   margin-left: 20px;
@@ -137,7 +138,8 @@ body {
 .active {
   border: 1px inset #fff !important;
   background: silver;
-  box-shadow: -1px -1px #000 !important;
+  border: 1px solid black;
+  border-color: black #808080 #fff !important;
   outline: 0 !important;
   background-image: url(../src/img/background.png) !important;
 }
@@ -236,11 +238,10 @@ div.body p {
 div.body button {
   font-family: "MS Sans Serif";
   font-size: 15px;
-  outline: 1px solid #000000;
   background: #C0C0C0;
   border-width: 1px;
   border-style: solid;
-  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  border-color: black black #808080 #FFFFFF ;
   padding: 4px 10px;
   margin: 0px auto 3px;
   display: block;
@@ -256,7 +257,8 @@ div.body button {
 div.body button:hover {
   border: 1px inset #fff !important;
   background: silver;
-  box-shadow: -1px -1px #000 !important;
+  border: 1px solid black;
+  border-color: black #808080 #fff !important;
   outline: 0 !important;
 }
 
@@ -326,6 +328,37 @@ a:active {
 
 /* CSS INPUT TYPE RANGE*/
 
+#fake-range{
+  display: none;
+  margin-top: 15px;
+ margin-bottom: 15px;
+}
+
+.custom-range {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
+  background: #000000;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-thumb {
+  position: absolute;
+  border: 0.5px solid black;
+  border-color: black #808080 black;
+  height: 24px;
+  width: 17px;
+  border-radius: 0px;
+  background: #C0C0C0;
+  cursor: pointer;
+  margin-top: -12.5px;
+}
+
 input[type=range] {
   height: 32px;
   -webkit-appearance: none;
@@ -342,15 +375,15 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  box-shadow: 1px 1px 0px #000000;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
   background: #000000;
   border-radius: 0px;
-  border: 1px solid #8A8A8A;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 0px #000000;
-  border: 1px solid #8A8A8A;
+  border: 0.5px solid black;
+  border-color: black #808080 black;
   height: 24px;
   width: 17px;
   border-radius: 0px;
@@ -368,15 +401,15 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  box-shadow: 1px 1px 0px #000000;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
   background: #000000;
   border-radius: 0px;
-  border: 1px solid #8A8A8A;
 }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 0px #000000;
-  border: 1px solid #8A8A8A;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
   height: 24px;
   width: 17px;
   border-radius: 0px;
@@ -395,22 +428,22 @@ input[type=range]::-ms-track {
 
 input[type=range]::-ms-fill-lower {
   background: #000000;
-  border: 1px solid #8A8A8A;
   border-radius: 0px;
-  box-shadow: 1px 1px 0px #000000;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
 }
 
 input[type=range]::-ms-fill-upper {
   background: #000000;
-  border: 1px solid #8A8A8A;
   border-radius: 0px;
-  box-shadow: 1px 1px 0px #000000;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black !important;
 }
 
 input[type=range]::-ms-thumb {
   margin-top: 1px;
-  box-shadow: 1px 1px 0px #000000;
-  border: 1px solid #8A8A8A;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
   height: 24px;
   width: 17px;
   border-radius: 0px;
@@ -458,7 +491,8 @@ input[type=range]:focus::-ms-fill-upper {
 button:hover  {
   border: 1px inset #fff !important;
   background: green !important;
-  box-shadow: -1px -1px #000 !important;
+  border: 0.5px solid black;
+  border-color: #808080 #808080 black;
   outline: 0 !important;
   background-image: url(../src/img/background.png) !important;
 }
@@ -482,7 +516,8 @@ button:hover  {
 
 button:hover, .button-contact:hover {
   border: 1px inset #fff !important;
-  box-shadow: -1px -1px #000 !important;
+  border: 0.5px solid black;
+  border-color: black #808080 #fff !important;
   outline: 0 !important;
   background-image: url(../src/img/background.png) !important;
 }
@@ -542,4 +577,15 @@ button:hover, .button-contact:hover {
   background-image: none !important;
   background: none !important;
   opacity: 0.8;
+}
+
+.input-player{
+  display: none;
+  padding-left: 5px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  
 }
