@@ -252,7 +252,7 @@ function WebPlayback(props) {
                 <div class="box player" ref={elementToCaptureRef}>
                     <div class="title music">
                         <img src={icon} width="20" height="20" class="icon-music" />
-                        <p class="title music">Music Player</p>
+                        <p class="title music">Spotify '95</p>
                     </div>
                     <div class="body">
                         <div class="container-info-music" >

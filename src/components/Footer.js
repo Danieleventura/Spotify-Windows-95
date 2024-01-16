@@ -2,6 +2,7 @@ import React from 'react';
 import icon from '../img/icons/windows-0.png';
 import iconGithub from '../img/github-mark.png';
 import iconLinkedin from '../img/linkedin.png';
+import iconSpotify from '../img/Spotify_icon.png';
 
 function Footer() {
 
@@ -20,6 +21,9 @@ function Footer() {
                     <a href="https://www.linkedin.com/in/daniele-ventura-83b66410b/" target="_blank" class="button-contact">
                         <img src={iconLinkedin} class="icon-control-player"></img>Linkedin
                     </a>
+                    <button class="button-contact active">
+                        <img src={iconSpotify} class="icon-control-player"></img>Spotify '95
+                    </button>
                     <div id="notifications">
                         <div id="clock">{date.getDate()}/{date.getMonth() +1}/1995</div>
                     </div>
