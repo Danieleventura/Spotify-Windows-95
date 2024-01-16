@@ -249,72 +249,70 @@ function WebPlayback(props) {
     } else {
         return (
             <>
-                <div class="container">
-                    <div class="box player" id="card" ref={elementToCaptureRef}>
-                        <div class="title music">
-                            <img src={icon} width="20" height="20" class="icon-music" />
-                            <p class="title music">Music Player</p>
-                        </div>
-                        <div class="body">
-                            <div class="container-info-music" >
-                                <img src={current_track.album.images[0].url} alt="" class="photo-album" />
-                                <div class="box-spotify">
-                                    <div class="music-group">
-                                        <p>Playlist:
-                                            <div id="input-playlist" class="input-player" >{inputPlaylist}</div>
-                                            <select name="playlists" id="playlist" onChange={(e) => { getTracks(e.target.value), document.getElementById("playlist").value = "0"; setInputPlaylist(current_playlist); }}>
-                                                <option value="0" class="option-music" selected disabled>{current_playlist}</option>
-                                                <option value="1" >Liked Songs</option>
-                                                {playlists.map(item =>
-                                                    <option key={item.uri} value={item.id}>{item.name}</option>
-                                                )};
-                                            </select>
-                                        </p>
-                                    </div>
-                                    <div class="music-group">
-                                        <p>Track:
-                                            <div id="input-track" class="input-player tracks">{inputTrack}</div>
-                                            <select value={0} name="tracks" id="tracks" onChange={(e) => { playTrack(e) }}>
-                                                <option value="0" class="option-music" selected disabled>{current_track.name}</option>
-                                                {tracks.map(item =>
-                                                    <option value={item.track.uri}>{item.track.name}</option>
-                                                )};
-                                            </select>
-                                        </p>
-                                    </div>
-                                    <div class="music-group">
-                                        <p>Artist: <span id="artist">{current_track.artists[0].name}</span></p>
-                                    </div>
-                                    <div class="music-group">
-                                        <div>
-                                            <div id="fake-range" class="slider"><div class="custom-range">
-                                                <div class="custom-thumb"></div></div>
-                                            </div>
-                                            <input id="range" type="range" min="0" max="100" onChange={(e) => { player.setVolume(e.target.value / 100) }}></input>
+                <div class="box player" ref={elementToCaptureRef}>
+                    <div class="title music">
+                        <img src={icon} width="20" height="20" class="icon-music" />
+                        <p class="title music">Music Player</p>
+                    </div>
+                    <div class="body">
+                        <div class="container-info-music" >
+                            <img src={current_track.album.images[0].url} alt="" class="photo-album" />
+                            <div class="box-spotify">
+                                <div class="music-group">
+                                    <p>Playlist:
+                                        <div id="input-playlist" class="input-player" >{inputPlaylist}</div>
+                                        <select name="playlists" id="playlist" onChange={(e) => { getTracks(e.target.value), document.getElementById("playlist").value = "0"; setInputPlaylist(current_playlist); }}>
+                                            <option value="0" class="option-music" selected disabled>{current_playlist}</option>
+                                            <option value="1" >Liked Songs</option>
+                                            {playlists.map(item =>
+                                                <option key={item.uri} value={item.id}>{item.name}</option>
+                                            )};
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="music-group">
+                                    <p>Track:
+                                        <div id="input-track" class="input-player tracks">{inputTrack}</div>
+                                        <select value={0} name="tracks" id="tracks" onChange={(e) => { playTrack(e) }}>
+                                            <option value="0" class="option-music" selected disabled>{current_track.name}</option>
+                                            {tracks.map(item =>
+                                                <option value={item.track.uri}>{item.track.name}</option>
+                                            )};
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="music-group">
+                                    <p>Artist: <span id="artist">{current_track.artists[0].name}</span></p>
+                                </div>
+                                <div class="music-group">
+                                    <div>
+                                        <div id="fake-range" class="slider"><div class="custom-range">
+                                            <div class="custom-thumb"></div></div>
                                         </div>
+                                        <input id="range" type="range" min="0" max="100" onChange={(e) => { player.setVolume(e.target.value / 100) }}></input>
                                     </div>
-                                    <div class="bnt-spotify">
-                                        <button onClick={() => { player.previousTrack() }} >
-                                            <img src={iconPrevious} class="icon-control-player"></img>
-                                        </button>
+                                </div>
+                                <div class="bnt-spotify">
+                                    <button onClick={() => { player.previousTrack() }} >
+                                        <img src={iconPrevious} class="icon-control-player"></img>
+                                    </button>
 
-                                        <button onClick={() => { player.togglePlay() }} >
-                                            {is_paused ? <img src={iconPlay} class="icon-control-player"></img> : <img src={iconPause} class="icon-control-player"></img>}
-                                        </button>
+                                    <button onClick={() => { player.togglePlay() }} >
+                                        {is_paused ? <img src={iconPlay} class="icon-control-player"></img> : <img src={iconPause} class="icon-control-player"></img>}
+                                    </button>
 
-                                        <button onClick={() => { player.nextTrack() }} >
-                                            <img src={iconNext} class="icon-control-player"></img>
-                                        </button>
+                                    <button onClick={() => { player.nextTrack() }} >
+                                        <img src={iconNext} class="icon-control-player"></img>
+                                    </button>
 
-                                        <button id="btn-shuffle" class="active" onClick={() => { changeShuffle() }} >
-                                            {is_shuffle ? <img src={iconShuffle} class="icon-control-player"></img> : <img src={iconShuffle} class="icon-control-player"></img>}
-                                        </button>
-                                    </div>
+                                    <button id="btn-shuffle" class="active" onClick={() => { changeShuffle() }} >
+                                        {is_shuffle ? <img src={iconShuffle} class="icon-control-player"></img> : <img src={iconShuffle} class="icon-control-player"></img>}
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button onClick={download} > Download </button>
+                    <button class="button-download"onClick={download} > Download Image </button>
                 </div>
             </>
         );
